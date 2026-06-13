@@ -1,0 +1,32 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "oil_and_gas_anomaly_detection"
+version = "0.0.1"
+description = "Anomaly_Detection"
+authors = [
+  { name = "narendra" },
+]
+
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    
+]
+requires-python = "~=3.10.0"
+
+
+[tool.ruff]
+line-length = 99
+src = ["oil_and_gas_anomaly_detection"]
+include = ["pyproject.toml", "oil_and_gas_anomaly_detection/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]  # Add import sorting
+
+[tool.ruff.lint.isort]
+known-first-party = ["oil_and_gas_anomaly_detection"]
+force-sort-within-sections = true
+
